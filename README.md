@@ -45,6 +45,10 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
 
 
 
+
+
+
+
 #### ejercicio n° 1 LED Intermitente 
 ```js
 void loop() {   // Se repite infinitamente
@@ -60,8 +64,11 @@ void loop() {   // Se repite infinitamente
   delay(1000);
 }
 ```
-<a
-  hrf="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png>"Led parpadeante.</a>
+<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png"/>
+
+
+
+
 
 
 
@@ -84,6 +91,7 @@ void loop() {   // Se repite infinitamente
 ```js
 // C++ code - Semáforo Autos y Peatones
 
+  digitalWrite(LED_5, HIGH);  // Rojo peatones encendido
 // Definición de pines
 int LED_1 = 6;  // Luz roja autos
 int LED_2 = 7;  // Luz amarilla autos
@@ -124,7 +132,12 @@ void loop() {
   // 🚦 Fase 4: Rojo autos, rojo peatones (tiempo intermedio)
   digitalWrite(LED_4, LOW);   // Verde peatones apagado
 }
+
+
+
+
 ```
-  digitalWrite(LED_5, HIGH);  // Rojo peatones encendido
+https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png
+
   delay(2000); // 2 segundos
 }
