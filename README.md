@@ -24,6 +24,8 @@ void loop() {
 }
 ```
 
+
+
 #### ejercicio N° LED Pulsador 
 void setup() {
   pinMode(2, INPUT);  // Botón como entrada
@@ -43,7 +45,7 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
 }
 ```
 
-
+<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/pulsador.png"pulsador.png/>
 
 
 
@@ -137,7 +139,7 @@ void loop() {
 
 
 ```
-https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png
+<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png"/>
 
   delay(2000); // 2 segundos
 }
