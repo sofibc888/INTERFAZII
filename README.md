@@ -43,6 +43,8 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
 }
 ```
 
+
+
 #### ejercicio n° 1 LED Intermitente 
 ```js
 void loop() {   // Se repite infinitamente
@@ -58,6 +60,7 @@ void loop() {   // Se repite infinitamente
   delay(1000);
 }
 ```
+<a hrf="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png">Led parpadeante.</a>
 
 
 
