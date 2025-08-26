@@ -135,7 +135,7 @@ void loop() {
   digitalWrite(LED_4, LOW);   // Verde peatones apagado
 }
 
-
+<img src="https://Captura de pantalla 2025-08-26 125723.png"/>
 
 
 ```
