@@ -141,5 +141,53 @@ void loop() {
 ```
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png"/>
 
+
+
+###ejercicio clase tres PROCESSING
+
+import processing.serial.*;
+
+Serial myPort;  // Crear objeto de la clase Serial
+static String val;    // Datos recibidos desde el puerto serial
+int sensorVal = 0;
+
+void setup()
+{
+  background(400); 
+  //fullScreen(P3D);
+   size(1000, 600);
+   noStroke();
+  noFill();
+  String portName = "COM3";// Cambia el número (en este caso) para que coincida con el puerto correspondiente conectado a tu Arduino. 
+
+  //myPort = new Serial(this, "/dev/cu.usbmodem1101", 9600);
+  myPort = new Serial(this, Serial.list()[0], 9600);
+
+}
+
+void draw()
+{
+  if ( myPort.available() > 0) {  // Si hay datos disponibles,
+  val = myPort.readStringUntil('\n'); 
+  try {
+   sensorVal = Integer.valueOf(val.trim());
+  }
+  catch(Exception e) {
+  ;
+  }
+  println(sensorVal); // léelos y guárdalos en vals!
+  }  
+ background(0);
+  // Escala el valor de mouseX de 0 a 640 a un rango entre 0 y 175
+  float c = map(sensorVal, 30, width, 10, 500);
+  // Escala el valor de mouseX de 0 a 640 a un rango entre 40 y 300
+  float d = map(sensorVal, 0, width, 500,30);
+  fill(255, c, 96);
+  ellipse(width/2, height/2, d, d);   
+}
+
+```
+```
+
   delay(2000); // 2 segundos
 }
