@@ -234,3 +234,5 @@ void draw() {
 
   delay(2000); // 2 segundos
 }
+
+<img src="img/IMG_0389.jpg"/>
