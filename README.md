@@ -325,3 +325,61 @@ void loop() {
 }
 
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
+ }
+
+
+
+
+
+
+
+
+ ###ejercicio botonera
+ // --- Configuración de botones ---
+const int numButtons = 3;
+const int buttonPins[numButtons] = {2, 4, 7};
+const int ledButtonPins[numButtons] = {9, 10, 11}; // LEDs botones
+
+// --- Configuración de potenciómetros ---
+const int numPots = 2;
+const int potPins[numPots] = {A0, A1};
+const int ledPotPins[numPots] = {3, 5}; // LEDs PWM
+
+// Variables de estados previos
+int lastButtonState[numButtons];
+int lastPotValue[numPots];
+
+void setup() {
+  Serial.begin(9600);
+
+  // Configurar botones y LEDs
+  for (int i = 0; i < numButtons; i++) {
+    pinMode(buttonPins[i], INPUT_PULLUP);
+    pinMode(ledButtonPins[i], OUTPUT);
+    lastButtonState[i] = digitalRead(buttonPins[i]);
+  }
+
+  // Configurar LEDs de potenciómetros
+  for (int i = 0; i < numPots; i++) {
+    pinMode(ledPotPins[i], OUTPUT);
+    lastPotValue[i] = analogRead(potPins[i]);
+  }
+}
+
+void loop() {
+  // Leer y enviar botones
+  for (int i = 0; i < numButtons; i++) {
+    int buttonState = digitalRead(buttonPins[i]);
+
+    // LED se enciende cuando botón está presionado
+    digitalWrite(ledButtonPins[i], buttonState == LOW ? HIGH : LOW);
+
+    if (buttonState != lastButtonState[i]) {  // enviar cambios
+      Serial.print("B");
+      Serial.print(i); 
+      Serial.print(":");
+      Serial.println(buttonState);
+      lastButtonState[i] = buttonState;
+    }
+  }
+  
