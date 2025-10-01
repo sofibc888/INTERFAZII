@@ -26,7 +26,7 @@ void loop() {
 
 
 
-#### ejercicio N° LED Pulsador 
+#### ejercicio n°3 LED Pulsador 
 void setup() {
   pinMode(2, INPUT);  // Botón como entrada
   pinMode(13, OUTPUT);
@@ -43,15 +43,16 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
   pinMode(8, OUTPUT);
   
 }
-```
+
 
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/pulsador.png"pulsador.png/>
 
+¨¨¨
 
 
 
 
-#### ejercicio n° 1 LED Intermitente 
+#### ejercicio n°4 LED Intermitente 
 ```js
 void loop() {   // Se repite infinitamente
   digitalWrite(13, HIGH);  // Encender LED
@@ -65,30 +66,17 @@ void loop() {   // Se repite infinitamente
   digitalWrite(8, LOW);
   delay(1000);
 }
-```
+
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png"/>
 
 
+```
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Ejercicio n°2 semáforo en Arduino.
+### ejercicio n°5 semáforo en Arduino.
 
 ```js
 // C++ code - Semáforo Autos y Peatones
@@ -138,12 +126,14 @@ void loop() {
 <img src="https://Captura de pantalla 2025-08-26 125723.png"/>
 
 
-```
+
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png"/>
 
+```
 
 
-###ejercicio clase tres PROCESSING
+
+### ejercicio n°6 clase tres PROCESSING
 
 import processing.serial.*;
 
@@ -186,9 +176,12 @@ void draw()
   ellipse(width/2, height/2, d, d);   
 }
 
+
 ```
 
-###codigo processing esferas de colores
+
+
+### ejercicio n°7 codigo processing esferas de colores
 mport processing.serial.*;
 
 Serial myPort;
@@ -239,7 +232,7 @@ void draw() {
 
 
 
-### ejerecicio 8 processing potenciador
+### ejerecicio n°8 processing potenciador
 size(1200, 720);
   background(165000);
   
@@ -302,7 +295,7 @@ class CircleData {
 
 
 
-###for if else ejercicio 23 septiembre 
+### ejercicio n°9 for if else ejercicio 
 int leds[] = {2, 3, 4, 5}; // Creamos un arreglo con los pines donde van conectados los LEDs
 
 void setup() {
@@ -334,7 +327,7 @@ void loop() {
 
 
 
- ###ejercicio botonera
+ ### ejercicio n°10  botonera
  // --- Configuración de botones ---
 const int numButtons = 3;
 const int buttonPins[numButtons] = {2, 4, 7};
