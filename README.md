@@ -376,3 +376,11 @@ void loop() {
     }
   }
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
+
+
+
+
+ ### presentación potenciometro ejercico elegido para la entrga
+
+
+ Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
