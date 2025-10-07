@@ -416,6 +416,10 @@ void loop() {
   analogWrite(9, brillo);               // Ajustar brillo
 }
 
+
+<img src="https://Captura de pantalla 2025-10-07 123427.png"/>
+
+
  Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
 
 
