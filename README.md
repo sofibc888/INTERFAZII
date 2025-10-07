@@ -50,7 +50,7 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
 
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/pulsador.pulsador.png"/>
 
-¨¨¨
+  ```
 
 
 
@@ -233,11 +233,9 @@ void draw() {
   }
 }
 
-```
-
   delay(2000); // 2 segundos
 }
-
+  ```
 <img src="img/IMG_0389.jpg"/>
 <img src="https://Captura de pantalla 2025-09-02 133914.png"/>
 ```
@@ -297,14 +295,14 @@ class CircleData {
     this.size = size;
   }
 }
-
+}
 ```
 <img src="img/Captura de pantalla 2025-09-02 133914.png"/>
 
 
 
 
-}
+
 
 ```
 
@@ -334,9 +332,10 @@ void loop() {
     delay(500);                         // Espera 0,5 segundos antes de pasar al siguiente
   }
 }
+}
 ```
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
- }
+ 
 ```
 
 
@@ -420,13 +419,14 @@ void loop() {
 }
  Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
 ```
+}
 <img src="https://Captura de pantalla 2025-10-07 123427.png"/>
 
 
 
 
 
-}
+
 ```
 
 
