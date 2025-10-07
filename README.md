@@ -27,6 +27,8 @@ void loop() {
 
 
 #### ejercicio n°3 LED Pulsador 
+
+```js
 void setup() {
   pinMode(2, INPUT);  // Botón como entrada
   pinMode(13, OUTPUT);
@@ -41,7 +43,8 @@ void loop() {
 void setup() {  // Configuración inicial (ej: pines como entrada/salida)
   pinMode(13, OUTPUT);  // Pin 13 como salida
   pinMode(8, OUTPUT);
-  
+
+  ```
 }
 
 
@@ -65,6 +68,8 @@ void loop() {   // Se repite infinitamente
   delay(1000);
   digitalWrite(8, LOW);
   delay(1000);
+```
+
 }
 
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png"/>
@@ -135,6 +140,8 @@ void loop() {
 
 ### ejercicio n°6 clase tres PROCESSING
 
+
+```js
 import processing.serial.*;
 
 Serial myPort;  // Crear objeto de la clase Serial
@@ -182,6 +189,9 @@ void draw()
 
 
 ### ejercicio n°7 codigo processing esferas de colores
+
+```js
+
 mport processing.serial.*;
 
 Serial myPort;
@@ -233,6 +243,9 @@ void draw() {
 
 
 ### ejerecicio n°8 processing potenciador
+
+```js
+
 size(1200, 720);
   background(165000);
   
@@ -291,11 +304,14 @@ class CircleData {
 
 }
 
-
+```
 
 
 
 ### ejercicio n°9 for if else ejercicio 
+
+```js
+
 int leds[] = {2, 3, 4, 5}; // Creamos un arreglo con los pines donde van conectados los LEDs
 
 void setup() {
@@ -319,7 +335,7 @@ void loop() {
 
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
  }
-
+```
 
 
 
@@ -328,6 +344,8 @@ void loop() {
 
 
  ### ejercicio n°10  botonera
+
+```js
  // --- Configuración de botones ---
 const int numButtons = 3;
 const int buttonPins[numButtons] = {2, 4, 7};
@@ -360,6 +378,9 @@ void setup() {
 }
 
 void loop() {
+
+```js
+ 
   // Leer y enviar botones
   for (int i = 0; i < numButtons; i++) {
     int buttonState = digitalRead(buttonPins[i]);
@@ -376,10 +397,17 @@ void loop() {
     }
   }
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
+```
+
+
+
 
 
 
 ### ejercicio entrega 1  LED CON POTENCIOMETRO  void setup() {
+ 
+  ```js
+   void setup() {
   pinMode(9, OUTPUT);  // Pin PWM (símbolo ~)
 }
 void loop() {
@@ -387,10 +415,11 @@ void loop() {
   int brillo = map(valor, 0, 1023, 0, 255);  // Convertir a rango PWM
   analogWrite(9, brillo);               // Ajustar brillo
 }
+
  Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
 
 
 }
+```
 
-"""
 
