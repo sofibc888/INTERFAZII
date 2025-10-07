@@ -379,8 +379,16 @@ void loop() {
 
 
 
-
- ### presentación potenciometro ejercico elegido para la entrga
-
-
+### ejercicio entrega 1  LED CON POTENCIOMETRO  void setup() {
+  pinMode(9, OUTPUT);  // Pin PWM (símbolo ~)
+}
+void loop() {
+  int valor = analogRead(A0);           // Leer potenciómetro (0-1023)
+  int brillo = map(valor, 0, 1023, 0, 255);  // Convertir a rango PWM
+  analogWrite(9, brillo);               // Ajustar brillo
+}
  Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
+
+
+
+
