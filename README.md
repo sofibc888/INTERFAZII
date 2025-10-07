@@ -239,7 +239,7 @@ void draw() {
 }
 
 <img src="img/IMG_0389.jpg"/>
-
+<img src="https://Captura de pantalla 2025-09-02 133914.png"/>
 
 
 ### ejerecicio n°8 processing potenciador
