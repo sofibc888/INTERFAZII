@@ -127,7 +127,7 @@ void loop() {
   // 🚦 Fase 4: Rojo autos, rojo peatones (tiempo intermedio)
   digitalWrite(LED_4, LOW);   // Verde peatones apagado
 }
-
+```
 <img src="https://Captura de pantalla 2025-08-26 125723.png"/>
 
 
@@ -240,7 +240,7 @@ void draw() {
 
 <img src="img/IMG_0389.jpg"/>
 <img src="https://Captura de pantalla 2025-09-02 133914.png"/>
-
+```
 
 ### ejerecicio n°8 processing potenciador
 
@@ -297,6 +297,8 @@ class CircleData {
     this.size = size;
   }
 }
+
+```
 <img src="img/Captura de pantalla 2025-09-02 133914.png"/>
 
 
@@ -332,7 +334,7 @@ void loop() {
     delay(500);                         // Espera 0,5 segundos antes de pasar al siguiente
   }
 }
-
+```
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
  }
 ```
@@ -396,6 +398,7 @@ void loop() {
       lastButtonState[i] = buttonState;
     }
   }
+```
  <img scr="/Captura de pantalla 2025-09-23 115923.png"/>
 ```
 
@@ -415,12 +418,12 @@ void loop() {
   int brillo = map(valor, 0, 1023, 0, 255);  // Convertir a rango PWM
   analogWrite(9, brillo);               // Ajustar brillo
 }
-
-
+ Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
+```
 <img src="https://Captura de pantalla 2025-10-07 123427.png"/>
 
 
- Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
+
 
 
 }
