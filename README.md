@@ -424,7 +424,7 @@ void loop() {
 
 
 
-###Ejercicio 9import processing.serial.*;
+###Ejercicio 9import processing.serial.*; sensor proximidad
 
 Serial myPort;  // Objeto para la comunicación serial
 int sensorValue = 0;
