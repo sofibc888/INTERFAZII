@@ -504,6 +504,7 @@ void draw() {
       fill(255);
       text(asciiChar, pixelX + cellSize * 0.5, pixelY + cellSize * 0.5);
     }
+Captura de pantalla 2025-10-14 115211.png
   }
 }
 
