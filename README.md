@@ -424,6 +424,41 @@ void loop() {
 
 
 
+###Ejercicio 9import processing.serial.*;
+
+Serial myPort;  // Objeto para la comunicación serial
+int sensorValue = 0;
+
+void setup() {
+  size(400, 400);
+  // Cambia el nombre del puerto por el que estés utilizando en tu sistema
+  String portName ="COM5";  // Obtener el primer puerto disponible
+  myPort = new Serial(this, Serial.list()[0], 9600);
+  myPort.bufferUntil('\n');  // Esperar a recibir una línea completa
+}
+
+void draw() {
+  background(600);
+  
+  // Mapeamos el valor del sensor al tamaño del círculo
+  float circleSize = map(sensorValue, 70, 1023, 10, width);
+  
+  // Dibujar el círculo en el centro
+  fill(60, 500, 90);
+  ellipse(width/2, height/2, circleSize, circleSize);
+}
+
+// Función para leer los datos seriales
+void serialEvent(Serial myPort) {
+  String inString = myPort.readStringUntil('\n');  // Leer la línea completa
+  if (inString != null) {
+    inString = trim(inString);  // Eliminar cualquier espacio o carácter no deseado
+    sensorValue = int(inString);  // Convertir la cadena en un número entero
+  }
+}
+
+
+
 
 
 
