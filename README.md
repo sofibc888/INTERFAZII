@@ -463,5 +463,48 @@ void serialEvent(Serial myPort) {
 
 
 ```
+### ejercicio processing sensor proximidad
+import processing.video.*;
+
+Capture cam;
+String asciiChars = "@%#*+=-:. ";  // Characters from dark to light
+int cols, rows;
+int cellSize = 10; // Size of each ASCII cell
+
+void setup() {
+  size(640, 480);
+  cam = new Capture(this, 640, 480);
+  cam.start();
+  textAlign(CENTER, CENTER);
+  textSize(cellSize);
+  cols = width / cellSize;
+  rows = height / cellSize;
+}
+
+void draw() {
+  if (cam.available() == true) {
+    cam.read();
+  }
+
+  cam.loadPixels();
+  background(0);
+
+  for (int y = 0; y < rows; y++) {
+    for (int x = 0; x < cols; x++) {
+      int pixelX = x * cellSize;
+      int pixelY = y * cellSize;
+      int index = pixelX + pixelY * cam.width;
+      color c = cam.pixels[index];
+      
+      // Calculate brightness and map it to ASCII characters
+      float bright = brightness(c);
+      int charIndex = int(map(bright, 0, 255, asciiChars.length() - 1, 0));
+      String asciiChar = asciiChars.substring(charIndex, charIndex + 1);
+
+      fill(255);
+      text(asciiChar, pixelX + cellSize * 0.5, pixelY + cellSize * 0.5);
+    }
+  }
+}
 
 
