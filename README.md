@@ -133,7 +133,7 @@ void loop() {
 
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/SEMAFORO.png"/>
 
-```
+
 
 
 
@@ -237,7 +237,10 @@ void draw() {
   ```
 <img src="img/IMG_0389.jpg"/>
 <img src="https://Captura de pantalla 2025-09-02 133914.png"/>
-```
+
+
+
+
 
 ### ejerecicio n°8 processing potenciador
 
@@ -303,7 +306,7 @@ class CircleData {
 
 
 
-```
+
 
 
 
@@ -335,7 +338,7 @@ void loop() {
 ```
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
  
-```
+
 
 
 
@@ -398,7 +401,7 @@ void loop() {
   }
 ```
  <img scr="/Captura de pantalla 2025-09-23 115923.png"/>
-```
+
 
 
 
@@ -461,7 +464,7 @@ void serialEvent(Serial myPort) {
 
 
 
-```
+
 ### ejercicio processing sensor proximidad
 import processing.video.*;
 
