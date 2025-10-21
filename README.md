@@ -426,8 +426,10 @@ void loop() {
 
 
 
-###Ejercicio 9import processing.serial.*; sensor proximidad
 
+
+###Ejercicio 9import processing.serial.*; sensor proximidad
+```
 Serial myPort;  // Objeto para la comunicación serial
 int sensorValue = 0;
 
@@ -458,7 +460,7 @@ void serialEvent(Serial myPort) {
     sensorValue = int(inString);  // Convertir la cadena en un número entero
   }
 }
-
+```
 
 
 
@@ -466,6 +468,8 @@ void serialEvent(Serial myPort) {
 
 
 ### ejercicio processing sensor proximidad
+
+```
 import processing.video.*;
 
 Capture cam;
@@ -506,6 +510,7 @@ void draw() {
       fill(255);
       text(asciiChar, pixelX + cellSize * 0.5, pixelY + cellSize * 0.5);
     }
+```
 Captura de pantalla 2025-10-14 115211.png
   }
 }
