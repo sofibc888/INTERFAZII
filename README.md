@@ -513,6 +513,92 @@ void draw() {
     }
 ```
 <img src="https://Captura de pantalla 2025-10-14 115211.png"/>
+
+
+
+// --- Librerías necesarias ---
+import processing.serial.*;
+import processing.video.*;
+
+// --- Variables de cámara y serial ---
+Capture cam;
+Serial myPort;
+
+// --- Variables del sensor ---
+float sensorValue = 0;
+float suavizado = 0;
+
+// --- Parámetros para detección de silueta ---
+float umbral = 100; // controla el contraste para definir la silueta
+
+void setup() {
+  size(1280, 720);
+  background(0);
+  
+  // --- Inicializar cámara ---
+  String[] cameras = Capture.list();
+  if (cameras.length == 0) {
+    println("No se encontró cámara.");
+    exit();
+  } else {
+    println("Cámara encontrada: " + cameras[0]);
+    cam = new Capture(this, cameras[0]);
+    cam.start();
+  }
+  
+  // --- Inicializar puerto serie (Arduino) ---
+  // Puedes ver la lista de puertos con println(Serial.list());
+  String portName = Serial.list()[0]; 
+ // myPort = new Serial(this, "/dev/cu.usbmodem1101", 9600);
+  myPort = new Serial(this, portName, 9600);
+}
+
+void draw() {
+  background(0);
+  
+  // --- Leer datos del sensor ---
+  while (myPort.available() > 0) {
+    String inString = trim(myPort.readStringUntil('\n'));
+    if (inString != null) {
+      sensorValue = float(inString);
+      suavizado = lerp(suavizado, sensorValue, 0.1);
+    }
+  }
+  
+  // --- Mapear los valores del sensor ---
+  float escala = map(suavizado, 0, 1023, 1.5, 0.5); // tamaño de la silueta
+  float alpha = map(suavizado, 0, 1023, 255, 80);   // opacidad según distancia
+  
+  // --- Captura de video ---
+  if (cam.available()) {
+    cam.read();
+  }
+
+  // --- Dibujar silueta desde la cámara ---
+  cam.loadPixels();
+  loadPixels();
+  
+  for (int y = 0; y < cam.height; y++) {
+    for (int x = 0; x < cam.width; x++) {
+      int loc = x + y * cam.width;
+      color c = cam.pixels[loc];
+      float brillo = brightness(c);
+      
+      // Si el brillo es menor que el umbral, dibujamos píxel blanco (silueta)
+      if (brillo < umbral) {
+        int px = int(x * escala);
+        int py = int(y * escala);
+        if (px < width && py < height) {
+          stroke(255, alpha);
+          point(px, py);
+        }
+      }
+    }
+  }
+}
+
+
+
   }
 }
 
