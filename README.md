@@ -48,7 +48,7 @@ void setup() {  // Configuración inicial (ej: pines como entrada/salida)
 }
 
 
-<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/pulsador.pulsador.png"/>
+<img src="img/pulsador.png"/>
 
   
 
