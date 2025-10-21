@@ -336,6 +336,7 @@ void loop() {
 }
 }
 ```
+
  <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
  
 
@@ -382,7 +383,7 @@ void setup() {
 
 void loop() {
 
-```js
+
  
   // Leer y enviar botones
   for (int i = 0; i < numButtons; i++) {
@@ -419,7 +420,6 @@ void loop() {
   int brillo = map(valor, 0, 1023, 0, 255);  // Convertir a rango PWM
   analogWrite(9, brillo);               // Ajustar brillo
 }
- Presentación  Propuesta Proyecto Profesional Moderna Azul y Marrón.pptx.pdf
 ```
 }
 <img src="https://Captura de pantalla 2025-10-07 123427.png"/>
@@ -428,7 +428,8 @@ void loop() {
 
 
 
-###Ejercicio 9import processing.serial.*; sensor proximidad
+### Ejercicio 9import processing.serial.*; sensor proximidad
+
 ```
 Serial myPort;  // Objeto para la comunicación serial
 int sensorValue = 0;
@@ -461,13 +462,13 @@ void serialEvent(Serial myPort) {
   }
 }
 ```
+<img src="https://Captura de pantalla 2025-10-07 123427.png"/>
 
 
 
 
 
-
-### ejercicio processing sensor proximidad
+### ejercicio 11 processing sensor proximidad
 
 ```
 import processing.video.*;
@@ -511,7 +512,7 @@ void draw() {
       text(asciiChar, pixelX + cellSize * 0.5, pixelY + cellSize * 0.5);
     }
 ```
-Captura de pantalla 2025-10-14 115211.png
+<img src="https://Captura de pantalla 2025-10-14 115211.png"/>
   }
 }
 
