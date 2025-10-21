@@ -517,7 +517,7 @@ void draw() {
 
 
 
- ### ejercico 12 
+ ### ejercico 12 arduino ide
 ``` 
 // --- Librerías necesarias ---
 import processing.serial.*;
@@ -555,10 +555,13 @@ void setup() {
  // myPort = new Serial(this, "/dev/cu.usbmodem1101", 9600);
   myPort = new Serial(this, portName, 9600);
 }
+```
 
-### ejercico 
+
+### ejercico 13 imagen procesiing
 
 ```
+
 void draw() {
   background(0);
   
@@ -601,7 +604,6 @@ void draw() {
       }
     }
   }
-}
 ```
 
 
