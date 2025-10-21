@@ -516,6 +516,9 @@ void draw() {
 
 
 
+
+ ### ejercico 12 
+``` 
 // --- Librerías necesarias ---
 import processing.serial.*;
 import processing.video.*;
@@ -553,6 +556,9 @@ void setup() {
   myPort = new Serial(this, portName, 9600);
 }
 
+### ejercico 
+
+```
 void draw() {
   background(0);
   
@@ -596,6 +602,6 @@ void draw() {
     }
   }
 }
-
+```
 
 
