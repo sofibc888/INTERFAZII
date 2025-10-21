@@ -75,7 +75,6 @@ void loop() {   // Se repite infinitamente
 <img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/PARPAD.png"/>
 
 
-```
 
 
 
