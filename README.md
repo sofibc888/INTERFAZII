@@ -603,7 +603,171 @@ void draw() {
         }
       }
     }
+
+
   }
+
+
+
 ```
+
+
+
+
+
+### Codigo funcional processin 
+
+codigo bueno pantalla pequeña
+/**
+ * Seguimiento de movimiento + estela + círculo con explosión
+ * 
+ * - Fondo negro (no muestra la cámara).
+ * - La cámara sigue funcionando internamente para detectar el movimiento.
+ * - Estela blanca sigue la mano.
+ * - Solo aparece un círculo amarillo aleatorio dentro de los límites.
+ * - Cuando la mano lo toca, el círculo "explota" visualmente y aparece uno nuevo.
+ */
+
+import processing.video.*;
+
+Capture cam;
+
+// --- Variables de movimiento ---
+PImage prevFrame;
+float threshold = 40; // sensibilidad
+PVector motionPos;
+
+// --- Estela (basada en el código original) ---
+int num = 60;
+float mx[] = new float[num];
+float my[] = new float[num];
+
+// --- Círculo interactivo ---
+PVector targetCircle;
+float circleSize = 60;
+boolean circleVisible = true;
+boolean exploding = false;
+float explosionSize = 0;
+float explosionAlpha = 255;
+
+// --- Límites seguros para aparición del círculo ---
+float margin = 100; // margen desde los bordes
+
+void setup() {
+  size(640, 480);
+  
+  // Iniciar cámara
+  String[] cameras = Capture.list();
+  if (cameras.length == 0) {
+    println("No se detectó ninguna cámara.");
+    exit();
+  }
+  cam = new Capture(this, cameras[0]);
+  cam.start();
+  
+  prevFrame = createImage(width, height, RGB);
+  motionPos = new PVector(width/2, height/2);
+  
+  noStroke();
+  fill(255, 153);
+  
+  // Crear el primer círculo aleatorio dentro de los límites
+  targetCircle = new PVector(random(margin, width - margin), random(margin, height - margin));
+}
+
+void captureEvent(Capture cam) {
+  cam.read();
+}
+
+void draw() {
+  if (cam.width == 0) return;
+  
+  // Fondo negro
+  background(0);
+  
+  PImage diff = createImage(width, height, RGB);
+  
+  cam.loadPixels();
+  prevFrame.loadPixels();
+  diff.loadPixels();
+  
+  float avgX = 0;
+  float avgY = 0;
+  int motionCount = 0;
+
+  // Detectar movimiento (mano)
+  for (int i = 0; i < cam.pixels.length; i++) {
+    color curr = cam.pixels[i];
+    color prev = prevFrame.pixels[i];
+    
+    float diffR = abs(red(curr) - red(prev));
+    float diffG = abs(green(curr) - green(prev));
+    float diffB = abs(blue(curr) - blue(prev));
+    float diffVal = (diffR + diffG + diffB) / 3;
+    
+    if (diffVal > threshold) {
+      diff.pixels[i] = color(255);
+      int x = i % width;
+      int y = i / width;
+      avgX += x;
+      avgY += y;
+      motionCount++;
+    } else {
+      diff.pixels[i] = color(0);
+    }
+  }
+  diff.updatePixels();
+  prevFrame.copy(cam, 0, 0, width, height, 0, 0, width, height);
+  
+  // Calcular posición promedio del movimiento (efecto espejo horizontal)
+  if (motionCount > 500) {
+    motionPos.set(width - (avgX / motionCount), avgY / motionCount);
+  }
+
+  // --- Estela de círculos blancos (seguimiento) ---
+  int which = frameCount % num;
+  mx[which] = motionPos.x;
+  my[which] = motionPos.y;
+
+  fill(255, 153);
+  noStroke();
+  for (int i = 0; i < num; i++) {
+    int index = (which + 1 + i) % num;
+    ellipse(mx[index], my[index], i, i);
+  }
+
+  // --- Círculo amarillo interactivo ---
+  if (circleVisible) {
+    fill(255, 200, 0, 200);
+    ellipse(targetCircle.x, targetCircle.y, circleSize, circleSize);
+    
+    // Detectar toque de la mano
+    float d = dist(motionPos.x, motionPos.y, targetCircle.x, targetCircle.y);
+    if (d < circleSize / 2) {
+      circleVisible = false;
+      exploding = true;
+      explosionSize = circleSize;
+      explosionAlpha = 255;
+    }
+  }
+
+  // --- Animación de explosión ---
+  if (exploding) {
+    fill(255, random(150, 255), 0, explosionAlpha);
+    ellipse(targetCircle.x, targetCircle.y, explosionSize, explosionSize);
+    explosionSize += 15;   // el círculo crece
+    explosionAlpha -= 20;  // se desvanece
+
+    if (explosionAlpha <= 0) {
+      exploding = false;
+      // crear un nuevo círculo dentro de los límites seguros
+      targetCircle.set(random(margin, width - margin), random(margin, height - margin));
+      circleVisible = true;
+    }
+  }
+}
+
+```
+
 
 
