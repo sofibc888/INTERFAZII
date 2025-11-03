@@ -457,7 +457,7 @@ void serialEvent(Serial myPort) {
   }
 }
 ```
-<img src="https://Captura de pantalla 2025-10-07 123427.png"/>
+<img src="img/sensorproximidad.jpg"/>
 
 
 
@@ -507,7 +507,7 @@ void draw() {
       text(asciiChar, pixelX + cellSize * 0.5, pixelY + cellSize * 0.5);
     }
 ```
-<img src="https://Captura de pantalla 2025-10-14 115211.png"/>
+<img src="img/imagenprocessing.jpg"/>
 
 
 
