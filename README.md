@@ -25,6 +25,7 @@ void loop() {
 ```
 
 
+<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/img/Captura de pantalla 2025-08-26 125723.png"/>
 
 #### ejercicio n°3 LED Pulsador 
 
