@@ -615,7 +615,7 @@ void draw() {
 
 
 
-### Codigo funcional processin 
+### Codigo funcional processin Entrega 2
 
 codigo bueno pantalla pequeña
 /**
