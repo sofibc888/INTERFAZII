@@ -236,9 +236,8 @@ void draw() {
   delay(2000); // 2 segundos
 }
   ```
-<img src="img/IMG_0389.jpg"/>
-<img src="https://Captura de pantalla 2025-09-02 133914.png"/>
 
+<img src="img/Captura de pantalla 2025-09-02 133914.png"/>
 
 
 
@@ -300,7 +299,7 @@ class CircleData {
 }
 }
 ```
-<img src="img/Captura de pantalla 2025-09-02 133914.png"/>
+
 
 
 
