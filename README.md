@@ -417,7 +417,7 @@ void loop() {
 }
 ```
 }
-<img src="https://Captura de pantalla 2025-10-07 123427.png"/>
+<img src="img/POTEN.png"/>
 
 
 
