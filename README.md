@@ -333,7 +333,7 @@ void loop() {
 }
 ```
 
-<img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
+<img scr="Captura de pantalla 2025-09-23 115923.png"/>
  
 
 
