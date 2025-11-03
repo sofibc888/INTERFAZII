@@ -627,7 +627,9 @@ codigo bueno pantalla pequeña
  * - Solo aparece un círculo amarillo aleatorio dentro de los límites.
  * - Cuando la mano lo toca, el círculo "explota" visualmente y aparece uno nuevo.
  */
-...
+
+'''
+
 import processing.video.*;
 
 Capture cam;
@@ -767,4 +769,4 @@ void draw() {
   }
 }
 
-...
+'''
