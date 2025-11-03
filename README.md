@@ -333,7 +333,7 @@ void loop() {
 }
 ```
 
- <img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
+<img scr="img/Captura de pantalla 2025-09-23 115923.png"/>
  
 
 
@@ -398,9 +398,8 @@ void loop() {
   }
 ```
  
- <img scr="img/IMG_0389.jpg"/>
 
-
+<img src="img/IMG_0389.jpg"/>
 
 
 
