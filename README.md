@@ -925,4 +925,5 @@ void draw() {
 }
 
 ```
-<img src="img/imagenprocessing.jpg"/>
+
+<img src="img/IMG_1587.jpg"/>
