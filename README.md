@@ -397,7 +397,8 @@ void loop() {
     }
   }
 ```
- <img scr="/Captura de pantalla 2025-09-23 115923.png"/>
+ 
+ <img scr="img/IMG_0389.jpg"/>
 
 
 
