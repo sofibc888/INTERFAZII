@@ -186,7 +186,7 @@ void draw()
 
 ```
 
-
+<img src="https://raw.githubusercontent.com/sofibc888/INTERFAZII/refs/heads/main/Captura de pantalla 2025-10-14 115211.png"/>
 
 ### ejercicio n°7 codigo processing esferas de colores
 
