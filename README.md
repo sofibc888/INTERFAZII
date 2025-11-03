@@ -300,11 +300,7 @@ class CircleData {
 }
 ```
 
-
-
-
-
-
+<img src="Captura de pantalla 2025-10-07 123427.png"/>
 
 
 
