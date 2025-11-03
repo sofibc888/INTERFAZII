@@ -12,6 +12,10 @@ void loop() {
 }
 ```
 
+
+<img src="img/sensorproximidad.jpg"/>
+
+
 #### ejercicio n°2 LED Interminente (Blink)
 ```js
 void setup() {
