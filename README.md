@@ -628,7 +628,7 @@ codigo bueno pantalla pequeña
  * - Cuando la mano lo toca, el círculo "explota" visualmente y aparece uno nuevo.
  */
 
-'''
+```
 
 import processing.video.*;
 
@@ -769,4 +769,4 @@ void draw() {
   }
 }
 
-'''
+```
